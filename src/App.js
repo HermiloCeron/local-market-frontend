@@ -2,33 +2,21 @@ import './App.css';
 import axios from 'axios';
 import React,{Component} from 'react';
 import {Route,Link,withRouter} from 'react-router-dom';
-import { connect} from 'react-redux';
+import { useSelector , useDispatch} from 'react-redux';
+import {increment,decrement} from './actions';
 
-class App extends Component {
-  // constructor(props){
-  //   super(props);
-  //   this.state={
-
-  //   }
-  // }
-  render(){
+function App() {
+  const counter=useSelector(state=>state.counter)
+  const isLogged=useSelector(state=>state.isLogged)
+  const dispatch=useDispatch();
     return (
       <div className="App">
-        Hello world
+        Counter {counter}
+        <button onClick={()=>dispatch(increment(5))}>+</button>
+        <button onClick={()=>dispatch(decrement())}>-</button>
+        {isLogged ? "Valuable information" : ""}
       </div>
     );
-  }
 }
 
-const mapStateToProps=(state)=>{
-  return {
-
-  }
-};
-const mapDispachToProps=(dispach)=>{
-  return {
-
-  }
-};
-
-export default connect(mapStateToProps,mapDispachToProps)(App);
+export default App;

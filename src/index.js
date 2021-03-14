@@ -5,11 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+import { createStore,combineReducers} from 'redux';
+import allReducer from './reducers';
 import { Provider } from 'react-redux';
-import { createStore} from 'redux';
-import reducer from './store/reducer';
 
-const store=createStore(reducer);
+const store=createStore(
+  allReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  );
 
 ReactDOM.render(
   <React.StrictMode>
