@@ -49,14 +49,13 @@ export const clientSignup=(body)=>{
         )
         .then(response=>{
             console.log(response);
+            dispatch({
+                type: 'SAVE_PROFILE',
+                payload: response.data
+            })
         })
         .catch(error=>{
             console.log(error.response);
         })
-        
-        // dispatch({
-        //     type: 'SIGN_IN',
-        //     payload: response.data
-        // })
     }
 }

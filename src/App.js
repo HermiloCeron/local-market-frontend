@@ -9,7 +9,7 @@ import Signup from './components/signup';
 import Profile from './components/profile';
 
 function App() {
-  const counter=useSelector(state=>state.counter)
+  const counter=useSelector(state=>state.counter);
   const dispatch=useDispatch();
     return (
       <div className="App">

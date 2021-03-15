@@ -4,7 +4,7 @@ import { useSelector , useDispatch} from 'react-redux';
 import {clientLogin} from '../actions';
 
 
-function Login(){
+function Login(props){
     const dispatch=useDispatch();
     const requestLogin=(e)=>{
         e.preventDefault();
@@ -14,7 +14,8 @@ function Login(){
         }
         console.log(data);
         dispatch(clientLogin(data));
-        console.log("After dispatch")
+        console.log("After dispatch");
+        props.history.push('/profile');
     }
     return(
         <div>
@@ -27,4 +28,4 @@ function Login(){
     )  
 }
 
-export default Login;
+export default withRouter(Login);
