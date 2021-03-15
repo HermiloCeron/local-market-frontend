@@ -61,3 +61,26 @@ export const clientSignup=(body)=>{
         })
     }
 }
+
+export const clientUpdate=(body)=>{
+    return async dispatch=>{
+        console.log(body)
+        axios.post('https://local-market-backend-heroku.herokuapp.com/clients/signup',
+            body,
+            {
+                headers: { "Content-Type": "application/json" }
+            }
+        )
+        .then(response=>{
+            console.log(response);
+            dispatch({
+                type: 'SAVE_PROFILE',
+                payload: response.data
+            })
+        })
+        .catch(error=>{
+            console.log(error.response);
+            alert(error.response.data);
+        })
+    }
+}

@@ -1,25 +1,32 @@
 import React from 'react';
 import {Route,Link,withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
+import EditProfile from './editProfile';
 
 function Profile(){
     const profile=useSelector(state=>state.profile);
     return(
         <div>
             <div>
-                <h3> Welcome {profile.username} </h3>
+                <div>
+                    Welcome {profile.username}
+                </div>
+                <Link to='/profile/edit'>
+                    <div>
+                        Edit profile
+                    </div>
+                </Link>
+                <div>
+                    Sign out
+                </div>
+                <div>
+                    Log out
+                </div>         
             </div>
-            <h3>Welcome to the Local Market App</h3>
-            <br></br>
-            <div>Please login or sign up first</div>
-            <br></br>
             <div>
-                <Link to='/login'>
-                    <button>Log in</button>
-                </Link>
-                <Link to='/signup'>
-                    <button>Sign up</button>
-                </Link>
+            <Route path='/profile/edit' render={()=>(
+                <EditProfile />
+            )} />
             </div>
         </div>
     )
