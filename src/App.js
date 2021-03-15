@@ -3,7 +3,7 @@ import axios from 'axios';
 import React,{Component} from 'react';
 import {Route,Link,withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
-import {increment,decrement,changeColor} from './actions';
+import {increment,decrement} from './actions';
 import HomePage from './components/homepage';
 import Login from './components/login';
 import Signup from './components/signup';
@@ -35,10 +35,7 @@ function App() {
         Counter {counter}
         <button onClick={()=>dispatch(increment(5))}>+</button>
         <button onClick={()=>dispatch(decrement())}>-</button>
-        <button onClick={()=>dispatch(changeColor())}>Change color</button>
         
-        Color: {backColor}
-        {isLogged ? "Valuable information" : ""}
       </div>
     );
 }

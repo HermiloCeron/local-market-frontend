@@ -13,25 +13,6 @@ export const decrement=()=>{
     }
 }
 
-
-// export const loadColor=()=>(dispatch)=>{
-//     return axios.get('https://www.colr.org/json/color/random')
-//     .then(response=>{
-//         console.log(response)
-//         dispatch(changeColor('#'+response.data.new_color));
-//     })
-// }
-
-export const changeColor=()=>{
-    return async dispatch=>{
-        const response=await axios.post('https://randomuser.me/api/');
-        dispatch({
-            type: 'CHANGE_COLOR',
-            payload: response.data.results[0].name.first
-        })
-    }
-}
-
 export const clientLogin=(body)=>{
     return async dispatch=>{
         console.log("http://localhost:3000/")
