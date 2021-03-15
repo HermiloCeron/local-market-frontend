@@ -5,6 +5,7 @@ import {Route,Link,withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
 import {increment,decrement,changeColor} from './actions';
 import HomePage from './components/homepage';
+import Login from './components/login';
 
 function App() {
   const counter=useSelector(state=>state.counter)
@@ -21,6 +22,9 @@ function App() {
         <Route exact path='/' render={()=>(
           <HomePage />
         )} />
+        <Route path='/login' render={()=>(
+          <Login />
+        )}/>
 
 
 

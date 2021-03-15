@@ -24,7 +24,7 @@ export const decrement=()=>{
 
 export const changeColor=()=>{
     return async dispatch=>{
-        const response=await axios.get('https://randomuser.me/api/');
+        const response=await axios.post('https://randomuser.me/api/');
         dispatch({
             type: 'CHANGE_COLOR',
             payload: response.data.results[0].name.first
@@ -32,3 +32,13 @@ export const changeColor=()=>{
     }
 }
 
+export const clientLogin=(data)=>{
+    return async dispatch=>{
+        const response=await axios.post('https://local-market-backend-heroku.herokuapp.com/clients/login',data);
+        console.log(response);
+        dispatch({
+            type: 'SIGN_IN',
+            payload: response.data
+        })
+    }
+}
