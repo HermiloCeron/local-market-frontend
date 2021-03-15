@@ -33,6 +33,7 @@ export const clientLogin=(body)=>{
         })
         .catch(error=>{
             console.log(error.response);
+            alert(error.response.data);
             console.log("HOLA")
         })
     }
@@ -56,6 +57,7 @@ export const clientSignup=(body)=>{
         })
         .catch(error=>{
             console.log(error.response);
+            alert(error.response.data);
         })
     }
 }
