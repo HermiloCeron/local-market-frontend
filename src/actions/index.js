@@ -26,16 +26,15 @@ export const clientLogin=(body)=>{
         )
         .then(response=>{
             console.log(response);
+            dispatch({
+                type: 'SAVE_PROFILE',
+                payload: response.data
+            })
         })
         .catch(error=>{
             console.log(error.response);
             console.log("HOLA")
         })
-        
-        // dispatch({
-        //     type: 'SIGN_IN',
-        //     payload: response.data
-        // })
     }
 }
 

@@ -14,6 +14,7 @@ function Login(){
         }
         console.log(data);
         dispatch(clientLogin(data));
+        console.log("After dispatch")
     }
     return(
         <div>
