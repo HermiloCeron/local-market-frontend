@@ -4,6 +4,7 @@ import React,{Component} from 'react';
 import {Route,Link,withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
 import {increment,decrement,changeColor} from './actions';
+import HomePage from './components/homepage';
 
 function App() {
   const counter=useSelector(state=>state.counter)
@@ -12,6 +13,17 @@ function App() {
   const dispatch=useDispatch();
     return (
       <div className="App">
+        <header>
+          <Link to='/'>
+            <h1>Local market</h1>
+          </Link>
+        </header>
+        <Route exact path='/' render={()=>(
+          <HomePage />
+        )} />
+
+
+
         Counter {counter}
         <button onClick={()=>dispatch(increment(5))}>+</button>
         <button onClick={()=>dispatch(decrement())}>-</button>
