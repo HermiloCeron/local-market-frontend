@@ -6,6 +6,7 @@ import { useSelector , useDispatch} from 'react-redux';
 import {increment,decrement,changeColor} from './actions';
 import HomePage from './components/homepage';
 import Login from './components/login';
+import Signup from './components/signup';
 
 function App() {
   const counter=useSelector(state=>state.counter)
@@ -24,6 +25,9 @@ function App() {
         )} />
         <Route path='/login' render={()=>(
           <Login />
+        )}/>
+        <Route path='/signup' render={()=>(
+          <Signup />
         )}/>
 
 
