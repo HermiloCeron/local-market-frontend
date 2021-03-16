@@ -9,6 +9,7 @@ function EditProfile(props){
     const requestUpdate=(e)=>{
         e.preventDefault();
         const data={
+            clientId: profile.clientId,
             username: e.target.username.value,
             password: e.target.password.value,
             eMail: e.target.eMail.value,

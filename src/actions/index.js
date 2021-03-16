@@ -64,8 +64,9 @@ export const clientSignup=(body)=>{
 
 export const clientUpdate=(body)=>{
     return async dispatch=>{
-        console.log(body)
-        axios.post('https://local-market-backend-heroku.herokuapp.com/clients/signup',
+        console.log(body);
+        console.log('https://local-market-backend-heroku.herokuapp.com/clients/edit/'+body.clientId)
+        axios.put('https://local-market-backend-heroku.herokuapp.com/clients/edit/'+body.clientId,
             body,
             {
                 headers: { "Content-Type": "application/json" }
