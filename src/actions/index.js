@@ -17,7 +17,6 @@ export const clientLogin=(body)=>{
     return async dispatch=>{
         console.log("http://localhost:3000/")
         console.log(body)
-        // axios.post('http://localhost:3000/clients/login',
         axios.post('https://local-market-backend-heroku.herokuapp.com/clients/login',
             body,
             {
@@ -119,6 +118,21 @@ export const requestBusiness=(body)=>{
         })
         .catch(error=>{
             console.log(error.response);
+            alert(error.response.data);
+        })
+    }
+}
+
+export const requestOneBusiness=(body)=>{
+    return async dispatch=>{
+        axios.get('https://local-market-backend-heroku.herokuapp.com/business/showOne/'+body.businessIndex)
+        .then(response=>{
+            dispatch({
+                type: 'SAVE_CURRENT_BUSINESS',
+                payload: response.data
+            })
+        })
+        .catch(error=>{
             alert(error.response.data);
         })
     }

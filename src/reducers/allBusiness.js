@@ -1,6 +1,22 @@
 const initialState={
     allLocal:[],
-    businessRating: []
+    businessRating: [],
+    currentBusiness: {
+        id: 0,
+        businessId: 0,
+        name: "Loading",
+        description: "",
+        address: "",
+        webpage: "",
+        facebook: "",
+        instagram: "",
+        whatsapp: "",
+        photo: "",
+        telephone: "",
+        foodCategory: "",
+        ownerId: 0,
+        location: ""
+      }
 }
 
 const allBusinessReducer=(state=initialState,action)=>{
@@ -10,22 +26,23 @@ const allBusinessReducer=(state=initialState,action)=>{
             let businessRating=0.0;
             if(business.Ratings.length>0){
                 let RatingsArray=business.Ratings.map(rate=>rate.rating)
-                console.log(RatingsArray)
                 businessRating=RatingsArray.reduce((acc,curr)=>acc+curr,0);
-                console.log(business.Ratings.length)
                 businessRating=parseFloat(businessRating)/parseFloat(business.Ratings.length);
-                console.log(businessRating)
             }
             else{
                 businessRating="No rated"
             }
             return(businessRating);
-        });
-        console.log(temporal)       
+        });       
             return {
                 ...state,
                 allLocal: action.payload,
                 businessRating: temporal
+            }
+        case 'SAVE_CURRENT_BUSINESS': 
+            return {
+                ...state,
+                currentBusiness: action.payload
             }
         default:
             return state
