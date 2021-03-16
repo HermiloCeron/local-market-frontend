@@ -85,3 +85,23 @@ export const clientUpdate=(body)=>{
         })
     }
 }
+
+export const clientDelete=(body)=>{
+    return async dispatch=>{
+        console.log(body);
+        axios.delete('https://local-market-backend-heroku.herokuapp.com/clients/delete/'+body.clientId,
+            body,
+            {
+                headers: { "Content-Type": "application/json" }
+            }
+        )
+        .then(response=>{
+            console.log(response);
+            alert(response.data);
+        })
+        .catch(error=>{
+            console.log(error.response);
+            alert(error.response.data);
+        })
+    }
+}

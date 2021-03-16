@@ -2,6 +2,7 @@ import React from 'react';
 import {Route,Link,withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
 import EditProfile from './editProfile';
+import Signout from './signout';
 
 function Profile(){
     const profile=useSelector(state=>state.profile);
@@ -16,9 +17,11 @@ function Profile(){
                         Edit profile
                     </div>
                 </Link>
+                <Link to='/profile/delete'>
                 <div>
                     Sign out
                 </div>
+                </Link>
                 <div>
                     Log out
                 </div>         
@@ -26,6 +29,9 @@ function Profile(){
             <div>
             <Route path='/profile/edit' render={()=>(
                 <EditProfile />
+            )} />
+            <Route path='/profile/delete' render={()=>(
+                <Signout />
             )} />
             </div>
         </div>
