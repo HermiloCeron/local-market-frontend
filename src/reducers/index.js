@@ -1,14 +1,14 @@
-import counterReducer from './counter';
 import loggedReducer from './isLogged';
 import profileReducer from './profile';
 import allBusinessReducer from './allBusiness';
+import flagReducer from './flag';
 import {combineReducers} from 'redux';
 
 const allReducers=combineReducers({
-    counter: counterReducer,
     isLogged: loggedReducer,
     profile: profileReducer,
-    localBusiness: allBusinessReducer
+    localBusiness: allBusinessReducer,
+    flag: flagReducer
 })
 
 export default allReducers;

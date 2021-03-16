@@ -1,18 +1,5 @@
 import axios from 'axios';
 
-export const increment=(num)=>{
-    return{
-        type: 'INCREMENT',
-        payload: num
-    }
-}
-
-export const decrement=()=>{
-    return{
-        type: 'DECREMENT'
-    }
-}
-
 export const clientLogin=(body)=>{
     return async dispatch=>{
         console.log("http://localhost:3000/")
@@ -136,4 +123,17 @@ export const requestOneBusiness=(body)=>{
             alert(error.response.data);
         })
     }
+}
+
+export const manageFlag=(flag)=>{
+    if(flag==1){
+        return{
+            type: 'SET',
+        }
+    }else{
+        return{
+            type: 'RESET',
+        }
+    }
+    
 }

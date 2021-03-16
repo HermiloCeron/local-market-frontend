@@ -15,7 +15,7 @@ function AllLocal(props){
         }
         console.log(data);
         dispatch(requestOneBusiness(data));
-        props.history.push('/profile/local');
+        props.history.push('/profile/selectedBusiness');
     }
     return(
         <div>

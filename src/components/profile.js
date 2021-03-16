@@ -4,6 +4,7 @@ import { useSelector , useDispatch} from 'react-redux';
 import EditProfile from './editProfile';
 import Signout from './signout';
 import AllLocal from './allLocal';
+import SelectedBusiness from './selectedBusiness';
 import {requestBusiness} from '../actions';
 
 function Profile(props){
@@ -50,6 +51,9 @@ function Profile(props){
                 )} />
                 <Route path='/profile/local' render={()=>(
                     <AllLocal />
+                )} />
+                <Route path='/profile/selectedBusiness' render={()=>(
+                    <SelectedBusiness />
                 )} />
             </div>
         </div>

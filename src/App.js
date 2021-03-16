@@ -2,14 +2,12 @@ import './App.css';
 import React,{Component} from 'react';
 import {Route,Link,withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
-import {increment,decrement} from './actions';
 import HomePage from './components/homepage';
 import Login from './components/login';
 import Signup from './components/signup';
 import Profile from './components/profile';
 
 function App() {
-  const counter=useSelector(state=>state.counter);
   const dispatch=useDispatch();
     return (
       <div className="App">
@@ -31,11 +29,6 @@ function App() {
           <Profile />
         )}/>
 
-
-
-        Counter {counter}
-        <button onClick={()=>dispatch(increment(5))}>+</button>
-        <button onClick={()=>dispatch(decrement())}>-</button>
         
       </div>
     );
