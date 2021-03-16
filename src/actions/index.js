@@ -105,3 +105,21 @@ export const clientDelete=(body)=>{
         })
     }
 }
+
+export const requestBusiness=(body)=>{
+    return async dispatch=>{
+        console.log(body);
+        axios.get('https://local-market-backend-heroku.herokuapp.com/business/show/'+body.location)
+        .then(response=>{
+            console.log(response);
+            dispatch({
+                type: 'SAVE_BUSINESS',
+                payload: response.data
+            })
+        })
+        .catch(error=>{
+            console.log(error.response);
+            alert(error.response.data);
+        })
+    }
+}
