@@ -11,8 +11,8 @@ function App() {
   const dispatch=useDispatch();
     return (
       <div className="App">
-        <header>
-          <Link to='/'>
+        <header id='main-header'>
+          <Link to='/' id='app-title'>
             <h1>Local market</h1>
           </Link>
         </header>

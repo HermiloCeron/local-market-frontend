@@ -11,6 +11,21 @@ body{
   font-family: 'Ubuntu', sans-serif;
 }
 
+.homepage-button{
+  margin: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #F2E9E1;
+  color:black;
+}
+
+.homepage-button:hover{
+  background-color: black;
+  color: white;
+  cursor: pointer; 
+}
+
 .selected{
   color: red;
 }
@@ -18,3 +33,29 @@ body{
 .unselected{
   color: green;
 }
+
+#app-title{
+  text-decoration: none;
+  color: #FFFFFF
+}
+
+#homepage-container{
+  display: flex;
+  justify-content: center;
+ }
+
+ #homepage-subcontainer{
+  background-color: #CBE86B;
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+ }
+
+#main-header{
+  background-color: #1C140D;
+  padding: 5px 20px;
+  margin-bottom: 20px;;
+}
+
+
