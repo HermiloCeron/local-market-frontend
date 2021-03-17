@@ -69,7 +69,7 @@ function SelectedBusiness(props){
                 <div className={ratingClassName4} onClick={(e)=>{requestRatingUpdate(e,4)}}>
                     4
                 </div>
-                <div className={ratingClassName5} onClick={(e)=>{requestRatingUpdate(e,5)}}>
+                <div className={ratingClassName5} onClick={(e)=>{requestRatingUpdate(e,5)}} alt='business_photo'>
                     5
                 </div>
             </div>
@@ -84,7 +84,7 @@ function SelectedBusiness(props){
             <div> {business.instagram} </div>
             <div> {business.whatsapp} </div>
             <div> {business.telephone} </div><br/>
-            { clientId==business.ownerId 
+            { clientId===business.ownerId 
                 ?
                     <div>
                         <Link to='/profile/editBusiness' className='homepage-button'>
