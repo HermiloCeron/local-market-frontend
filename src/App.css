@@ -87,6 +87,21 @@ body{
   border-radius: 10px;
 }
 
+.no-button{
+  background-color: #CBE86B;
+  color:#FFFFFF;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: solid black 2px;
+}
+
+.no-button:hover{
+  background-color: green;
+  cursor: pointer;
+}
+
 .profile-menu-button{
   background-color: #1C140D;
   border: #1C140D solid 2px;
@@ -133,6 +148,21 @@ body{
 .unselected{
   background-color: #CBE86B;
   color: white;
+}
+
+.yes-button{
+  background-color: orange;
+  color:#FFFFFF;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: solid black 2px;
+}
+
+.yes-button:hover{
+  background-color: red;
+  cursor: pointer;
 }
 
 #all-business-container{
@@ -202,4 +232,13 @@ body{
 #selected-business-title{
   font-size: 45px;
   text-align: center;
+}
+
+#signout-container{
+  background-color: red;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  padding: 15px;
 }

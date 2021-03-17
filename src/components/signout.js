@@ -16,15 +16,13 @@ function Signout(props){
         props.history.push('/');
     }
     return(
-        <div>
+        <div id='signout-container'>
             <div>Are you sure?</div>
-            <div onClick={(e)=>{requestDelete(e)}}>
+            <div onClick={(e)=>{requestDelete(e)}} className='yes-button'>
                 Yes
             </div>
-            <Link to='/profile'>
-                <div>
+            <Link to='/profile' className='no-button'>
                     No
-                </div>
             </Link>
         </div>
     )

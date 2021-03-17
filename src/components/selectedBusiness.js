@@ -83,14 +83,18 @@ function SelectedBusiness(props){
             <div> {business.facebook} </div>
             <div> {business.instagram} </div>
             <div> {business.whatsapp} </div>
-            <div> {business.telephone} </div>
+            <div> {business.telephone} </div><br/>
             { clientId==business.ownerId 
                 ?
                     <div>
-                        <Link to='/profile/editBusiness'>
-                            <div>Edit</div>
+                        <Link to='/profile/editBusiness' className='homepage-button'>
+                            Edit
                         </Link>
-                        <div onClick={(e)=>{flagChange(e,1)}}>Delete</div>
+                        <div onClick={(e)=>{flagChange(e,1)}}>
+                            <button className='homepage-button'>
+                                Delete
+                            </button>
+                        </div>
                     </div>
                 : ""
             }
@@ -98,10 +102,10 @@ function SelectedBusiness(props){
                 ?
                     <div>
                         <div>Are you sure?</div>
-                        <div onClick={(e)=>{requestDelete(e,0)}}>
+                        <div onClick={(e)=>{requestDelete(e,0)}} className='yes-button'>
                             Yes
                         </div>
-                        <div onClick={(e)=>{flagChange(e,0)}}>
+                        <div onClick={(e)=>{flagChange(e,0)}} className='no-button'>
                             No
                         </div>
                     </div>
