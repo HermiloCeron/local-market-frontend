@@ -5,6 +5,7 @@ import EditProfile from './editProfile';
 import Signout from './signout';
 import AllLocal from './allLocal';
 import SelectedBusiness from './selectedBusiness';
+import EditBusiness from './editBusiness';
 import {requestBusiness} from '../actions';
 
 function Profile(props){
@@ -54,6 +55,9 @@ function Profile(props){
                 )} />
                 <Route path='/profile/selectedBusiness' render={()=>(
                     <SelectedBusiness />
+                )} />
+                <Route path='/profile/editBusiness' render={()=>(
+                    <EditBusiness />
                 )} />
             </div>
         </div>

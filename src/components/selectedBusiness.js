@@ -32,7 +32,9 @@ function SelectedBusiness(props){
             { clientId==business.ownerId 
                 ?
                     <div>
-                        <div>Edit</div>
+                        <Link to='/profile/editBusiness'>
+                            <div>Edit</div>
+                        </Link>
                         <div onClick={(e)=>{flagChange(e,1)}}>Delete</div>
                     </div>
                 : ""

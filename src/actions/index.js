@@ -137,3 +137,26 @@ export const manageFlag=(flag)=>{
     }
     
 }
+
+export const businessUpdate=(body)=>{
+    return async dispatch=>{
+        console.log(body);
+        axios.put('https://local-market-backend-heroku.herokuapp.com/business/'+body.ownerId+'/edit/'+body.businessId,
+            body,
+            {
+                headers: { "Content-Type": "application/json" }
+            }
+        )
+        .then(response=>{
+            console.log(response);
+            dispatch({
+                type: 'SAVE_CURRENT_BUSINESS',
+                payload: response.data
+            })
+        })
+        .catch(error=>{
+            console.log(error.response);
+            alert(error.response.data);
+        })
+    }
+}
