@@ -7,7 +7,7 @@ import AllLocal from './allLocal';
 import SelectedBusiness from './selectedBusiness';
 import EditBusiness from './editBusiness';
 import CreateBusiness from './createBusiness';
-import {requestBusiness} from '../actions';
+import {requestBusiness,requestLuckyBusiness} from '../actions';
 
 function Profile(props){
     const dispatch=useDispatch();
@@ -17,13 +17,20 @@ function Profile(props){
         const data={
             location: profile.location
         }
-        console.log(data);
         dispatch(requestBusiness(data));
         props.history.push('/profile/local');
     }
     const refreshPage=(e)=>{
         props.history.push('/');
         window.location.reload();
+    }
+    const requestRecommendedBusiness=(e)=>{
+        e.preventDefault();
+        const data={
+            clientId: profile.clientId
+        }
+        dispatch(requestLuckyBusiness(data));
+        props.history.push('/profile/selectedBusiness');
     }
     return(
         <div>
@@ -33,6 +40,9 @@ function Profile(props){
                 </div>
                 <div onClick={(e)=>{requestLocalBusiness(e)}}>
                     Local business
+                </div>
+                <div onClick={(e)=>{requestRecommendedBusiness(e)}}>
+                    Recomendation
                 </div>
                 <Link to='/profile/createBusiness'>
                     <div>

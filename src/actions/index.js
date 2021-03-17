@@ -206,3 +206,18 @@ export const businessDelete=(body)=>{
         })
     }
 }
+
+export const requestLuckyBusiness=(body)=>{
+    return async dispatch=>{
+        axios.get('https://local-market-backend-heroku.herokuapp.com/business/'+body.clientId+'/lucky')
+        .then(response=>{
+            dispatch({
+                type: 'SAVE_CURRENT_BUSINESS',
+                payload: response.data
+            })
+        })
+        .catch(error=>{
+            alert(error.response.data);
+        })
+    }
+}
