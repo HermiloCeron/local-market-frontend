@@ -115,7 +115,7 @@ export const requestBusiness=(body)=>{
 
 export const requestOneBusiness=(body)=>{
     return async dispatch=>{
-        axios.get('https://local-market-backend-heroku.herokuapp.com/business/showOne/'+body.businessIndex)
+        axios.get('https://local-market-backend-heroku.herokuapp.com/business/'+body.clientId+'/showOne/'+body.businessIndex)
         .then(response=>{
             dispatch({
                 type: 'SAVE_CURRENT_BUSINESS',

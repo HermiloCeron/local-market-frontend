@@ -15,8 +15,9 @@ const initialState={
         telephone: "",
         foodCategory: "",
         ownerId: 0,
-        location: ""
-      }
+        location: "",
+        requesterRating:0
+    }
 }
 
 const allBusinessReducer=(state=initialState,action)=>{

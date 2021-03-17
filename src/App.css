@@ -10,3 +10,11 @@ Black: #1C140D
 body{
   font-family: 'Ubuntu', sans-serif;
 }
+
+.selected{
+  color: red;
+}
+
+.unselected{
+  color: green;
+}

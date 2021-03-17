@@ -8,6 +8,8 @@ function SelectedBusiness(props){
     const business=useSelector(state=>state.localBusiness.currentBusiness);
     const clientId=useSelector(state=>state.profile.clientId);
     const controlFlag=useSelector(state=>state.flag);
+    const ratingClassName1="selected";
+    const ratingClassName2="unselected";
     let flag=0;
     const flagChange=(e,num)=>{
         e.preventDefault();
@@ -61,6 +63,23 @@ function SelectedBusiness(props){
                     </div>
                 : ""
             }
+            <div>
+                <div className={ratingClassName1}>
+                    1
+                </div>
+                <div className={ratingClassName2}>
+                    2
+                </div>
+                <div>
+                    3
+                </div>
+                <div>
+                    4
+                </div>
+                <div>
+                    5
+                </div>
+            </div>
         </div>
     )
 }

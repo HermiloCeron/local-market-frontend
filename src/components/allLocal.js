@@ -11,7 +11,8 @@ function AllLocal(props){
     const requestABusiness=(e,businessIndex)=>{
         e.preventDefault();
         const data={
-            businessIndex: businessIndex
+            businessIndex: businessIndex,
+            clientId: profile.clientId
         }
         console.log(data);
         dispatch(requestOneBusiness(data));
