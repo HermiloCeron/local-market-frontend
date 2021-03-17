@@ -50,6 +50,43 @@ body{
   cursor: pointer; 
 }
 
+.individual-business-container{
+  border: #1C140D solid 2px;
+  border-radius: 15px;
+  padding: 15px;
+  margin:15px;
+  width: 300px;
+  background-color: #1C140D;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.individual-business-container:hover{
+  background-color: #FFFFFF;
+  color: #1C140D;
+  cursor: pointer; 
+}
+
+.individual-business-name{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.individual-business-rate{
+  color: #CBE86B;
+}
+
+.individual-business-photo{
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 .profile-menu-button{
   background-color: #1C140D;
   border: #1C140D solid 2px;
@@ -75,9 +112,20 @@ body{
   color: green;
 }
 
+#all-business-container{
+  padding: 15px;
+  margin: 15px;
+}
+
 #app-title{
   text-decoration: none;
   color: #FFFFFF
+}
+
+#business-grid-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 #homepage-container{

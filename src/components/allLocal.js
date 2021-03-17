@@ -19,22 +19,28 @@ function AllLocal(props){
         props.history.push('/profile/selectedBusiness');
     }
     return(
-        <div>
-            <h3>All the local business in your area:</h3>
+        <div id='all-business-container'>
+            <div>All the local business in your area:</div>
             <br></br>
-            {localBusiness.map((business,index)=>{
-                return(
-                    <div key={'local'+business.businessId} onClick={(e)=>{requestABusiness(e,business.businessId)}}>
-                        <img src={business.photo}/>
-                        <div>
-                            {business.name}
+            <div id='business-grid-container'>
+                {localBusiness.map((business,index)=>{
+                    return(
+                        <div 
+                            className='individual-business-container' 
+                            key={'local'+business.businessId} 
+                            onClick={(e)=>{requestABusiness(e,business.businessId)}}
+                        >
+                            <img src={business.photo} className='individual-business-photo'/>
+                            <div className='individual-business-name'>
+                                {business.name}
+                            </div>
+                            <div className='individual-business-rate'>
+                                Rating: {parseFloat(ratings[index]).toFixed(1)}
+                            </div>
                         </div>
-                        <div>
-                            {ratings[index]}
-                        </div>
-                    </div>
-                )
-            })}
+                    )
+                })}
+            </div>
         </div>
     )
 }
