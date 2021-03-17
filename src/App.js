@@ -1,14 +1,13 @@
 import './App.css';
-import React,{Component} from 'react';
-import {Route,Link,withRouter} from 'react-router-dom';
-import { useSelector , useDispatch} from 'react-redux';
+import React from 'react';
+import {Route,Link} from 'react-router-dom';
+import { useSelector} from 'react-redux';
 import HomePage from './components/homepage';
 import Login from './components/login';
 import Signup from './components/signup';
 import Profile from './components/profile';
 
 function App() {
-  const dispatch=useDispatch();
   const isLogged=useSelector(state=>state.isLogged);
     return (
       <div className="App">

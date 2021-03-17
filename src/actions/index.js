@@ -117,7 +117,7 @@ export const requestOneBusiness=(body)=>{
 }
 
 export const manageFlag=(flag)=>{
-    if(flag==1){
+    if(flag===1){
         return{
             type: 'SET',
         }
