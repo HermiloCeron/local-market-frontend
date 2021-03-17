@@ -20,16 +20,28 @@ function EditProfile(props){
         props.history.push('/profile');
     }
     return(
-        <div>
+        <div id='selected-business-container'>
             <div>
                 Edit your information:
             </div>
             <form onSubmit={(e)=>{requestUpdate(e)}}>
-                Username: <input type='text' name='username' defaultValue={profile.username}/> <br/>
-                Password: <input type='text' name='password' defaultValue={profile.password}/> <br/>
-                Email: <input type='text' name='eMail' defaultValue={profile.eMail}/> <br/>
-                Location: <input type='text' name='location' defaultValue={profile.location}/> <br/>
-                <input type='submit' value='Update'/>
+                <div className='form-line'>
+                    <div className='form-text'>Username: </div>
+                    <input type='text' name='username' defaultValue={profile.username}/> 
+                </div>           
+                <div className='form-line'>
+                    <div className='form-text'>Password: </div>
+                    <input type='text' name='password' defaultValue={profile.password}/>
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Email: </div>
+                    <input type='text' name='eMail' defaultValue={profile.eMail}/> 
+                </div>                
+                <div className='form-line'>
+                    <div className='form-text'>Location: </div>
+                    <input type='text' name='location' defaultValue={profile.location}/> 
+                </div>
+                <input type='submit' value='Update' className='homepage-button'/>
             </form>
         </div>
     )

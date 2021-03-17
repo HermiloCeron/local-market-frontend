@@ -28,7 +28,7 @@ function CreateBusiness(props){
     return(
         <div id='selected-business-container'>
             <div>
-                Edit the bussiness information:
+                Fill the bussiness information:
             </div>
             <div>
                 <form onSubmit={(e)=>{requestCreation(e)}}>
