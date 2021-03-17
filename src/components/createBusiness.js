@@ -1,4 +1,4 @@
-import {Route,Link,withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
 import {businessCreate} from '../actions';
 
@@ -21,7 +21,6 @@ function CreateBusiness(props){
             ownerId: profile.clientId,
             location: e.target.location.value
           }
-          console.log(data);
         dispatch(businessCreate(data));
         props.history.push('/profile/selectedBusiness');
     }

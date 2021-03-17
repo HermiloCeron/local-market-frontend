@@ -1,6 +1,6 @@
 import React from 'react';
-import {Route,Link,withRouter} from 'react-router-dom';
-import { useSelector , useDispatch} from 'react-redux';
+import {withRouter} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
 import {clientSignup} from '../actions';
 
 function Signup(props){
@@ -13,7 +13,6 @@ function Signup(props){
             eMail: e.target.eMail.value,
             location: e.target.location.value
         }
-        console.log(data);
         dispatch(clientSignup(data));
         props.history.push('/profile');
     }

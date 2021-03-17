@@ -1,4 +1,4 @@
-import {Route,Link,withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
 import {businessUpdate} from '../actions';
 
@@ -22,7 +22,6 @@ function EditBusiness(props){
             ownerId: business.ownerId,
             location: e.target.location.value
           }
-          console.log(data);
         dispatch(businessUpdate(data));
         props.history.push('/profile/selectedBusiness');
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route,Link,withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
 import {requestOneBusiness} from '../actions';
 
@@ -14,7 +14,6 @@ function AllLocal(props){
             businessIndex: businessIndex,
             clientId: profile.clientId
         }
-        console.log(data);
         dispatch(requestOneBusiness(data));
         props.history.push('/profile/selectedBusiness');
     }

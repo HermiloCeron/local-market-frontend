@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route,Link,withRouter} from 'react-router-dom';
+import {Link,withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
 import {clientDelete} from '../actions';
 
@@ -11,7 +11,6 @@ function Signout(props){
         const data={
             clientId: profile.clientId,
         }
-        console.log(data);
         dispatch(clientDelete(data));
         props.history.push('/');
     }

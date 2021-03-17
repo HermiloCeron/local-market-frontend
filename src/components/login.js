@@ -1,6 +1,6 @@
 import React from 'react';
-import {Route,Link,withRouter} from 'react-router-dom';
-import { useSelector , useDispatch} from 'react-redux';
+import {withRouter} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
 import {clientLogin} from '../actions';
 
 function Login(props){
@@ -11,9 +11,7 @@ function Login(props){
             username: e.target.username.value,
             password: e.target.password.value
         }
-        console.log(data);
         dispatch(clientLogin(data));
-        console.log("After dispatch");
         props.history.push('/profile');
     }
     return(

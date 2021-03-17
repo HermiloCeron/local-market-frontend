@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route,Link,withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
 import {clientUpdate} from '../actions';
 
@@ -15,7 +15,6 @@ function EditProfile(props){
             eMail: e.target.eMail.value,
             location: e.target.location.value
         }
-        console.log(data);
         dispatch(clientUpdate(data));
         props.history.push('/profile');
     }
