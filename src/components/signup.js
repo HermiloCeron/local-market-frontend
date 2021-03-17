@@ -3,7 +3,6 @@ import {Route,Link,withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
 import {clientSignup} from '../actions';
 
-
 function Signup(props){
     const dispatch=useDispatch();
     const requestSignup=(e)=>{
@@ -19,13 +18,25 @@ function Signup(props){
         props.history.push('/profile');
     }
     return(
-        <div>
-            <form onSubmit={(e)=>{requestSignup(e)}}>
-                Username: <input type='text' name='username'/> <br/>
-                Password: <input type='text' name='password'/> <br/>
-                Email: <input type='text' name='eMail'/> <br/>
-                Location: <input type='text' name='location'/> <br/>
-                <input type='submit' value='Sign up'/>
+        <div id='homepage-subcontainer'>
+            <form onSubmit={(e)=>{requestSignup(e)}} >
+                <div className='form-line'>
+                    <div className='form-text'>Username: </div>
+                    <input type='text' name='username' className='form-input'/>
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Password: </div>
+                    <input type='text' name='password' className='form-input'/> 
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Email:</div> 
+                    <input type='text' name='eMail' className='form-input'/> 
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Location:</div> 
+                    <input type='text' name='location' className='form-input'/> 
+                </div>
+                <input type='submit' value='Sign up' className='homepage-button'/>
             </form>
         </div>
     )

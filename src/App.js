@@ -16,20 +16,22 @@ function App() {
             <h1>Local market</h1>
           </Link>
         </header>
-        <Route exact path='/' render={()=>(
-          <HomePage />
-        )} />
-        <Route path='/login' render={()=>(
-          <Login />
-        )}/>
-        <Route path='/signup' render={()=>(
-          <Signup />
-        )}/>
+        <main>
+        <div id='homepage-container'>
+          <Route exact path='/' render={()=>(
+            <HomePage />
+          )} />
+          <Route path='/login' render={()=>(
+            <Login />
+          )}/>
+          <Route path='/signup' render={()=>(
+            <Signup />
+          )}/>
+        </div>
         <Route path='/profile' render={()=>(
           <Profile />
         )}/>
-
-        
+        </main>     
       </div>
     );
 }

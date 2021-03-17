@@ -11,6 +11,25 @@ body{
   font-family: 'Ubuntu', sans-serif;
 }
 
+.form-input{
+  width: 300px;
+  background-color: #F2E9E1;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.form-line{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+}
+
+.form-text{
+  width: 100px;
+  text-align: end;
+  padding: 5px;;
+}
+
 .homepage-button{
   margin: 10px;
   font-family: 'Ubuntu', sans-serif;
