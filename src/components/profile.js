@@ -33,35 +33,31 @@ function Profile(props){
         props.history.push('/profile/selectedBusiness');
     }
     return(
-        <div>
+        <div id='profile-main-container'>
             <div>
-                <div>
-                    Welcome {profile.username}
-                </div>
-                <div onClick={(e)=>{requestLocalBusiness(e)}}>
-                    Local business
-                </div>
-                <div onClick={(e)=>{requestRecommendedBusiness(e)}}>
-                    Recomendation
-                </div>
-                <Link to='/profile/createBusiness'>
+                <div id='profile-menu-container'>
                     <div>
-                        Create business
+                        Welcome {profile.username}
                     </div>
-                </Link>
-                <Link to='/profile/edit'>
-                    <div>
-                        Edit profile
+                    <div onClick={(e)=>{requestLocalBusiness(e)}} className='profile-menu-button'>
+                        Local business
                     </div>
-                </Link>
-                <Link to='/profile/delete'>
-                <div>
-                    Sign out
+                    <div onClick={(e)=>{requestRecommendedBusiness(e)}} className='profile-menu-button'>
+                        Recomendation
+                    </div>
+                    <Link to='/profile/createBusiness' className='profile-menu-button'>
+                            Create business
+                    </Link>
+                    <Link to='/profile/edit' className='profile-menu-button'>
+                            Edit profile
+                    </Link>
+                    <Link to='/profile/delete' className='profile-menu-button'>
+                        Sign out
+                    </Link>
+                    <div onClick={(e)=>{refreshPage()}} className='profile-menu-button'>
+                        Log out
+                    </div>         
                 </div>
-                </Link>
-                <div onClick={(e)=>{refreshPage()}}>
-                    Log out
-                </div>         
             </div>
             <div>
                 <Route path='/profile/edit' render={()=>(

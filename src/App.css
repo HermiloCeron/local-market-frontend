@@ -7,6 +7,11 @@ Beige: #F2E9E1
 Black: #1C140D
 */
 
+a{
+  text-decoration: none;
+  color: #1C140D;
+}
+
 body{
   font-family: 'Ubuntu', sans-serif;
 }
@@ -45,6 +50,23 @@ body{
   cursor: pointer; 
 }
 
+.profile-menu-button{
+  background-color: #1C140D;
+  border: #1C140D solid 2px;
+  color:#FFFFFF;
+  text-align: center;
+  padding:8px;
+  margin: 5px;
+  font-size: 18px;
+  border-radius: 10px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.profile-menu-button:hover{
+  background-color: #FFFFFF;
+  color: #1C140D;
+}
+
 .selected{
   color: red;
 }
@@ -77,4 +99,16 @@ body{
   margin-bottom: 20px;;
 }
 
+#profile-main-container{
+  display:flex;
+  flex-direction: row;
+}
 
+#profile-menu-container{
+  background-color: #CBE86B;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+}
