@@ -45,9 +45,11 @@ function SelectedBusiness(props){
         const data={
             rating: value,
             businessId: business.businessId,
-            clientId: clientId
+            clientId: clientId,
+            business: business
         }
         dispatch(updateRating(data));
+        props.history.push('/profile/selectedBusiness');
     }
     return(
         <div>

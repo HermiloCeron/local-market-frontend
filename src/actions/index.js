@@ -232,11 +232,15 @@ export const updateRating=(body)=>{
             }
         )
         .then(response=>{
+            // let modifiedBusiness=body.business;
+            // modifiedBusiness.requesterRating=response.data.rating;
+            const modifiedBusiness={...body.business,requesterRating:response.data.rating}
             console.log(response);
-            // dispatch({
-            //     type: 'SAVE_CURRENT_BUSINESS',
-            //     payload: response.data
-            // })
+            console.log(modifiedBusiness)
+            dispatch({
+                type: 'SAVE_CURRENT_BUSINESS',
+                payload: modifiedBusiness
+            })
         })
         .catch(error=>{
             console.log(error.response);
