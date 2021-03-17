@@ -52,9 +52,28 @@ function SelectedBusiness(props){
         props.history.push('/profile/selectedBusiness');
     }
     return(
-        <div>
-            <div> {business.name} </div>
-            <br></br>
+        <div id='selected-business-container'>
+            <div id='selected-business-title'> {business.name} </div>
+            <br/>
+            <div className='rate-container'>
+                <div>Rate me: </div>
+                <div className={ratingClassName1} onClick={(e)=>{requestRatingUpdate(e,1)}}>
+                    1
+                </div>
+                <div className={ratingClassName2} onClick={(e)=>{requestRatingUpdate(e,2)}}>
+                    2
+                </div>
+                <div className={ratingClassName3} onClick={(e)=>{requestRatingUpdate(e,3)}}>
+                    3
+                </div>
+                <div className={ratingClassName4} onClick={(e)=>{requestRatingUpdate(e,4)}}>
+                    4
+                </div>
+                <div className={ratingClassName5} onClick={(e)=>{requestRatingUpdate(e,5)}}>
+                    5
+                </div>
+            </div>
+            <br/>
             <div> 
                 <img src={business.photo}/>
             </div>
@@ -88,23 +107,6 @@ function SelectedBusiness(props){
                     </div>
                 : ""
             }
-            <div>
-                <div className={ratingClassName1} onClick={(e)=>{requestRatingUpdate(e,1)}}>
-                    1
-                </div>
-                <div className={ratingClassName2} onClick={(e)=>{requestRatingUpdate(e,2)}}>
-                    2
-                </div>
-                <div className={ratingClassName3} onClick={(e)=>{requestRatingUpdate(e,3)}}>
-                    3
-                </div>
-                <div className={ratingClassName4} onClick={(e)=>{requestRatingUpdate(e,4)}}>
-                    4
-                </div>
-                <div className={ratingClassName5} onClick={(e)=>{requestRatingUpdate(e,5)}}>
-                    5
-                </div>
-            </div>
         </div>
     )
 }

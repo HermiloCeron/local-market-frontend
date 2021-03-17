@@ -27,24 +27,56 @@ function EditBusiness(props){
         props.history.push('/profile/selectedBusiness');
     }
     return(
-        <div>
+        <div id='selected-business-container'>
             <div>
                 Edit the bussiness information:
             </div>
             <form onSubmit={(e)=>{requestUpdate(e)}}>
-                Name: <input type='text' name='name' defaultValue={business.name}/> <br/>
-                Description: <input type='text' name='description' defaultValue={business.description}/> <br/>
-                Address: <input type='text' name='address' defaultValue={business.address}/> <br/>
-                Webpage <input type='text' name='webpage' defaultValue={business.webpage}/> <br/>
-                Facebook: <input type='text' name='facebook' defaultValue={business.facebook}/> <br/>
-                Instagram: <input type='text' name='instagram' defaultValue={business.instagram}/> <br/>
-                Whatsapp: <input type='text' name='whatsapp' defaultValue={business.whatsapp}/> <br/>
-                Photo: <input type='text' name='photo' defaultValue={business.photo}/> <br/>
-                Phone: <input type='text' name='telephone' defaultValue={business.telephone}/> <br/>
-                Food category: <input type='text' name='foodCategory' defaultValue={business.foodCategory}/> <br/>
-                Location: <input type='text' name='location' defaultValue={business.location}/> <br/>
-
-                <input type='submit' value='Update'/>
+                <div className='form-line'>
+                    <div className='form-text'>Name: </div>
+                    <input type='text' name='name' defaultValue={business.name} className='form-input'/> 
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Description: </div>
+                    <input type='text' name='description' defaultValue={business.description} className='form-input'/>
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Address: </div>
+                    <input type='text' name='address' defaultValue={business.address} className='form-input'/>
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Webpage </div>
+                    <input type='text' name='webpage' defaultValue={business.webpage} className='form-input'/>
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Facebook: </div>
+                    <input type='text' name='facebook' defaultValue={business.facebook} className='form-input'/> 
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Instagram: </div>
+                    <input type='text' name='instagram' defaultValue={business.instagram} className='form-input'/> 
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Whatsapp: </div>
+                    <input type='text' name='whatsapp' defaultValue={business.whatsapp} className='form-input'/> 
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Photo: </div>
+                    <input type='text' name='photo' defaultValue={business.photo} className='form-input'/> 
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Phone: </div>
+                    <input type='text' name='telephone' defaultValue={business.telephone} className='form-input'/> 
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Food category: </div>
+                    <input type='text' name='foodCategory' defaultValue={business.foodCategory} className='form-input'/> 
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Location: </div>
+                    <input type='text' name='location' defaultValue={business.location} className='form-input'/> 
+                </div>
+                <input type='submit' value='Update' className='homepage-button'/>
             </form>
         </div>
     )

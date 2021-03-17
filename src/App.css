@@ -104,12 +104,35 @@ body{
   color: #1C140D;
 }
 
+.rate-container{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.selected,.unselected{
+  width: 35px;
+  height:35px;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bolder;
+  border: #1C140D 1px solid;
+  margin: 10px;
+}
+
+.selected:hover,.unselected:hover{
+  cursor: pointer;
+}
+
 .selected{
-  color: red;
+  background-color: red;
+  color: #1C140D;
 }
 
 .unselected{
-  color: green;
+  background-color: #CBE86B;
+  color: white;
 }
 
 #all-business-container{
@@ -167,4 +190,16 @@ body{
   text-align: center;
   border-radius: 10px;
   border: solid #1C140D 2px;
+}
+
+#selected-business-container{
+  padding: 15px;
+  margin: 15px;
+  background-color: #CBE86B;
+  border-radius: 15px;
+}
+
+#selected-business-title{
+  font-size: 45px;
+  text-align: center;
 }
