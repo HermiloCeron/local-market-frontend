@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route,Link,withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
-import {manageFlag} from '../actions';
+import {manageFlag, businessDelete} from '../actions';
 
 function SelectedBusiness(props){
     const dispatch=useDispatch();
@@ -14,7 +14,16 @@ function SelectedBusiness(props){
         flag=num;
         dispatch(manageFlag(flag));
     }
-    console.log(flag)
+    const requestDelete=(e)=>{
+        e.preventDefault();
+        const data={
+            businessId: business.businessId,
+            ownerId: business.ownerId
+          }
+        dispatch(businessDelete(data));
+        dispatch(manageFlag(0));
+        props.history.push('/profile');
+    }
     return(
         <div>
             <div> {business.name} </div>
@@ -43,7 +52,9 @@ function SelectedBusiness(props){
                 ?
                     <div>
                         <div>Are you sure?</div>
-                        <div>Yes</div>
+                        <div onClick={(e)=>{requestDelete(e,0)}}>
+                            Yes
+                        </div>
                         <div onClick={(e)=>{flagChange(e,0)}}>
                             No
                         </div>

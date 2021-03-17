@@ -17,6 +17,15 @@ const profileReducer=(state=initialState,action)=>{
                 eMail: action.payload.eMail,
                 location: action.payload.location
             }
+        case 'CLEAN_PROFILE':          
+            return {
+                ...state,
+                clientId: 0,
+                username: "",
+                password: "",
+                eMail:"",
+                location:""
+            }
         default:
             return state
     }

@@ -21,6 +21,10 @@ function Profile(props){
         dispatch(requestBusiness(data));
         props.history.push('/profile/local');
     }
+    const refreshPage=(e)=>{
+        props.history.push('/');
+        window.location.reload();
+    }
     return(
         <div>
             <div>
@@ -45,7 +49,7 @@ function Profile(props){
                     Sign out
                 </div>
                 </Link>
-                <div>
+                <div onClick={(e)=>{refreshPage()}}>
                     Log out
                 </div>         
             </div>

@@ -84,6 +84,9 @@ export const clientDelete=(body)=>{
         .then(response=>{
             console.log(response);
             alert(response.data);
+            dispatch({
+                type: 'CLEAN_PROFILE'
+            })
         })
         .catch(error=>{
             console.log(error.response);
@@ -176,6 +179,26 @@ export const businessCreate=(body)=>{
                 type: 'SAVE_CURRENT_BUSINESS',
                 payload: response.data
             })
+        })
+        .catch(error=>{
+            console.log(error.response);
+            alert(error.response.data);
+        })
+    }
+}
+
+export const businessDelete=(body)=>{
+    return async dispatch=>{
+        console.log(body);
+        axios.delete('https://local-market-backend-heroku.herokuapp.com/business/'+body.ownerId+'/delete/'+body.businessId,
+            body,
+            {
+                headers: { "Content-Type": "application/json" }
+            }
+        )
+        .then(response=>{
+            console.log(response);
+            alert(response.data);
         })
         .catch(error=>{
             console.log(error.response);
