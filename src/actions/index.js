@@ -160,3 +160,26 @@ export const businessUpdate=(body)=>{
         })
     }
 }
+
+export const businessCreate=(body)=>{
+    return async dispatch=>{
+        console.log(body);
+        axios.post('https://local-market-backend-heroku.herokuapp.com/business/'+body.ownerId+'/new/',
+            body,
+            {
+                headers: { "Content-Type": "application/json" }
+            }
+        )
+        .then(response=>{
+            console.log(response);
+            dispatch({
+                type: 'SAVE_CURRENT_BUSINESS',
+                payload: response.data
+            })
+        })
+        .catch(error=>{
+            console.log(error.response);
+            alert(error.response.data);
+        })
+    }
+}

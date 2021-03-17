@@ -6,6 +6,7 @@ import Signout from './signout';
 import AllLocal from './allLocal';
 import SelectedBusiness from './selectedBusiness';
 import EditBusiness from './editBusiness';
+import CreateBusiness from './createBusiness';
 import {requestBusiness} from '../actions';
 
 function Profile(props){
@@ -29,6 +30,11 @@ function Profile(props){
                 <div onClick={(e)=>{requestLocalBusiness(e)}}>
                     Local business
                 </div>
+                <Link to='/profile/createBusiness'>
+                    <div>
+                        Create business
+                    </div>
+                </Link>
                 <Link to='/profile/edit'>
                     <div>
                         Edit profile
@@ -58,6 +64,9 @@ function Profile(props){
                 )} />
                 <Route path='/profile/editBusiness' render={()=>(
                     <EditBusiness />
+                )} />
+                <Route path='/profile/createBusiness' render={()=>(
+                    <CreateBusiness />
                 )} />
             </div>
         </div>
