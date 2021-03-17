@@ -1,15 +1,29 @@
 import React from 'react';
 import {Route,Link,withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
-import {manageFlag, businessDelete} from '../actions';
+import {manageFlag, businessDelete,updateRating} from '../actions';
 
 function SelectedBusiness(props){
     const dispatch=useDispatch();
     const business=useSelector(state=>state.localBusiness.currentBusiness);
     const clientId=useSelector(state=>state.profile.clientId);
     const controlFlag=useSelector(state=>state.flag);
-    const ratingClassName1="selected";
-    const ratingClassName2="unselected";
+    let ratingClassName1="unselected";
+    let ratingClassName2="unselected";
+    let ratingClassName3="unselected";
+    let ratingClassName4="unselected";
+    let ratingClassName5="unselected";
+    if(business.requesterRating===1){
+        ratingClassName1="selected"
+    }else if(business.requesterRating===2){
+        ratingClassName2="selected"
+    }else if(business.requesterRating===3){
+        ratingClassName3="selected"
+    }else if(business.requesterRating===4){
+        ratingClassName4="selected"
+    }else if(business.requesterRating===5){
+        ratingClassName5="selected"
+    }
     let flag=0;
     const flagChange=(e,num)=>{
         e.preventDefault();
@@ -25,6 +39,15 @@ function SelectedBusiness(props){
         dispatch(businessDelete(data));
         dispatch(manageFlag(0));
         props.history.push('/profile');
+    }
+    const requestRatingUpdate=(e,value)=>{
+        e.preventDefault();
+        const data={
+            rating: value,
+            businessId: business.businessId,
+            clientId: clientId
+        }
+        dispatch(updateRating(data));
     }
     return(
         <div>
@@ -64,19 +87,19 @@ function SelectedBusiness(props){
                 : ""
             }
             <div>
-                <div className={ratingClassName1}>
+                <div className={ratingClassName1} onClick={(e)=>{requestRatingUpdate(e,1)}}>
                     1
                 </div>
-                <div className={ratingClassName2}>
+                <div className={ratingClassName2} onClick={(e)=>{requestRatingUpdate(e,2)}}>
                     2
                 </div>
-                <div>
+                <div className={ratingClassName3} onClick={(e)=>{requestRatingUpdate(e,3)}}>
                     3
                 </div>
-                <div>
+                <div className={ratingClassName4} onClick={(e)=>{requestRatingUpdate(e,4)}}>
                     4
                 </div>
-                <div>
+                <div className={ratingClassName5} onClick={(e)=>{requestRatingUpdate(e,5)}}>
                     5
                 </div>
             </div>

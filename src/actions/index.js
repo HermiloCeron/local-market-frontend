@@ -221,3 +221,26 @@ export const requestLuckyBusiness=(body)=>{
         })
     }
 }
+
+export const updateRating=(body)=>{
+    return async dispatch=>{
+        console.log(body);
+        axios.put('https://local-market-backend-heroku.herokuapp.com/business/'+body.clientId+'/editRating/'+body.businessId,
+            body,
+            {
+                headers: { "Content-Type": "application/json" }
+            }
+        )
+        .then(response=>{
+            console.log(response);
+            // dispatch({
+            //     type: 'SAVE_CURRENT_BUSINESS',
+            //     payload: response.data
+            // })
+        })
+        .catch(error=>{
+            console.log(error.response);
+            alert(error.response.data);
+        })
+    }
+}
