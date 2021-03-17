@@ -36,7 +36,7 @@ function Profile(props){
         <div id='profile-main-container'>
             <div>
                 <div id='profile-menu-container'>
-                    <div>
+                    <div id='profile-welcome'>
                         Welcome {profile.username}
                     </div>
                     <div onClick={(e)=>{requestLocalBusiness(e)}} className='profile-menu-button'>
