@@ -3,7 +3,6 @@ import {Route,Link,withRouter} from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
 import {clientLogin} from '../actions';
 
-
 function Login(props){
     const dispatch=useDispatch();
     const requestLogin=(e)=>{
@@ -18,11 +17,17 @@ function Login(props){
         props.history.push('/profile');
     }
     return(
-        <div>
+        <div id='homepage-subcontainer'>
             <form onSubmit={(e)=>{requestLogin(e)}} >
-                Username: <input type='text' name='username'/> <br/>
-                Password: <input type='text' name='password'/> <br/>
-                <input type='submit' value='Login'/>
+                <div className='form-line'>
+                    <div className='form-text'>Username:</div>
+                    <input type='text' name='username' className='form-input'/> 
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Password:</div>
+                    <input type='text' name='password' className='form-input'/> <br/>
+                </div>
+                <input type='submit' value='Login' className='homepage-button'/>
             </form> 
         </div>
     )  
