@@ -16,6 +16,9 @@ export const clientLogin=(body)=>{
                 type: 'SAVE_PROFILE',
                 payload: response.data
             })
+            dispatch({
+                type: 'SIGN_IN'
+            })
         })
         .catch(error=>{
             console.log(error.response);

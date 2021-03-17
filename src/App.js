@@ -9,6 +9,7 @@ import Profile from './components/profile';
 
 function App() {
   const dispatch=useDispatch();
+  const isLogged=useSelector(state=>state.isLogged);
     return (
       <div className="App">
         <header id='main-header'>
@@ -28,9 +29,13 @@ function App() {
             <Signup />
           )}/>
         </div>
-        <Route path='/profile' render={()=>(
-          <Profile />
-        )}/>
+        {isLogged 
+          ?
+            <Route path='/profile' render={()=>(
+              <Profile />
+            )}/>
+          : ""
+        }
         </main>     
       </div>
     );
