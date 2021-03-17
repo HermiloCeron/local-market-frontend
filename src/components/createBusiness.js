@@ -26,25 +26,60 @@ function CreateBusiness(props){
         props.history.push('/profile/selectedBusiness');
     }
     return(
-        <div>
+        <div id='selected-business-container'>
             <div>
                 Edit the bussiness information:
             </div>
-            <form onSubmit={(e)=>{requestCreation(e)}}>
-                Name: <input type='text' name='name'/> <br/>
-                Description: <input type='text' name='description'/> <br/>
-                Address: <input type='text' name='address'/> <br/>
-                Webpage <input type='text' name='webpage'/> <br/>
-                Facebook: <input type='text' name='facebook'/> <br/>
-                Instagram: <input type='text' name='instagram'/> <br/>
-                Whatsapp: <input type='text' name='whatsapp'/> <br/>
-                Photo: <input type='text' name='photo'/> <br/>
-                Phone: <input type='text' name='telephone'/> <br/>
-                Food category: <input type='text' name='foodCategory'/> <br/>
-                Location: <input type='text' name='location'/> <br/>
-
-                <input type='submit' value='Create'/>
+            <div>
+                <form onSubmit={(e)=>{requestCreation(e)}}>
+                <div className='form-line'>
+                    <div className='form-text'>Name: </div>
+                    <input type='text' name='name' className='form-input'/>
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Description: </div>
+                    <input type='text' name='description' className='form-input'/>
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Address: </div>
+                    <input type='text' name='address' className='form-input'/>
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Webpage </div>
+                    <input type='text' name='webpage' className='form-input'/>
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Facebook: </div>
+                    <input type='text' name='facebook' className='form-input'/>
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Instagram: </div>
+                    <input type='text' name='instagram' className='form-input'/>
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Whatsapp: </div>
+                    <input type='text' name='whatsapp' className='form-input'/>
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Photo: </div>
+                    <input type='text' name='photo' className='form-input'/>
+                </div>
+                <div className='form-line'>
+                    <div className='form-text'>Phone: </div>
+                    <input type='text' name='telephone' className='form-input'/>
+                </div>         
+                <div className='form-line'>
+                    <div className='form-text'>Food category: </div>
+                    <input type='text' name='foodCategory' className='form-input'/>
+                </div>                
+                <div className='form-line'>
+                    <div className='form-text'>Location: </div>
+                    <input type='text' name='location' className='form-input'/>
+                </div>
+                <input type='submit' value='Create' className='homepage-button'/>
             </form>
+            </div>
+            
         </div>
     )
 }
