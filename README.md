@@ -73,11 +73,14 @@ Two user modes:
 
 </p>
 
-
-
 ## Project takeaways
 
-## Samples
+<p>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV9sxVITmHqCUV_G9c0AwHGrv2E344k2VhNg&usqp=CAU" alt="Lections learned" width="400"/>
+
+</p>
+
 
 ## Links
 
