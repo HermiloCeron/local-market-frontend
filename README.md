@@ -69,6 +69,8 @@ Two user modes:
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdD_LzHAz-a6A54tJnv2BSHwAV8BtgX_-QBg&usqp=CAU" alt="Postgres logo" width="200"/>
 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiCubHlHPR5Zns2GZ9r2fsubiqcGHguUBTnA&usqp=CAU" alt="Heroku logo" width="200"/>
+
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvLf2FqJ417MHyGj_cLgLLx8mfTAeac9K80A&usqp=CAU" alt="Redux logo" width="400"/>
 
 </p>
