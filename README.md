@@ -106,6 +106,8 @@ Two user modes:
 
 ## Links
 
+* [Backend repo](https://github.com/HermiloCeron/local-market-backend)
+
 * [Backend](https://local-market-backend-heroku.herokuapp.com/)
 
 * [Frontend](http://hermilo-local-market.surge.sh/)
