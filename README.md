@@ -43,8 +43,8 @@ Two user modes:
 
 ### Strech goals
 
-* Manage schedules. For example you want a plumber. It gives you 3 options but you need it Monday afternoon
-* Advertisement according to the search (If I seek a plumber, advertise me pipes manufacturer or homedepot, and for the pumbler advertise him suppliers) Mock an advertisement API.
+- [ ] Manage schedules. For example you want a plumber. It gives you 3 options but you need it Monday afternoon
+- [ ] Advertisement according to the search (If I seek a plumber, advertise me pipes manufacturer or homedepot, and for the pumbler advertise him suppliers) Mock an advertisement API.
 
 
 ## Wireframes
