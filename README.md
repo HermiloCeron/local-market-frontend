@@ -24,13 +24,22 @@ Two user modes:
 
 ![Table 1](./public/food.png)
 
-## Project objectives
-
-## MVP / Strech goals
-
 ![Table 2](./public/food2.png)
 
 ![Databases](./public/databases.png)
+
+## MVP / Strech goals
+
+### MVP
+
+- [X] User can login.
+- [X] User can signup.
+- [X] User can delete account.
+- [X] User can edit profile.
+- [X] Results returned and rendered based on location.
+- [X] A random business is recommended based on the peers database
+- [X] User can add, edit and delete business
+- [X] Styling included in MVP (consistent color scheme and fonts)
 
 ### Strech goals
 
@@ -81,7 +90,7 @@ Two user modes:
 
 ## Project takeaways
 
-* Project completed ¬¬:
+* Solid project deployed ¬¬:
 
 <p>
 
