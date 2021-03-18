@@ -73,6 +73,10 @@ Two user modes:
 
 </p>
 
+* Redux-thunk
+
+* Some - hooks (useSelector , useDispatch)
+
 ## Project takeaways
 
 * Project completed ¬¬:
