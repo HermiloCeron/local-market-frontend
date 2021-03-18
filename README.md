@@ -63,14 +63,17 @@ Two user modes:
 
 <img src="https://1000marcas.net/wp-content/uploads/2020/02/GitHub-Logo-600x338.jpg" alt="GitHub logo" height="200"/>
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0syl-pMTbiJQw4yW4R0Ll8A3a-K8jAw2M_Q&usqp=CAU" alt="Express logo" height="200"/>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0syl-pMTbiJQw4yW4R0Ll8A3a-K8jAw2M_Q&usqp=CAU" alt="Express logo" width="200"/>
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO-E3rdwO5-nHqmqbzVeieB_n-jLxH6ax6Dg&usqp=CAU" alt="Sequelize logo" width="200"/>
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdD_LzHAz-a6A54tJnv2BSHwAV8BtgX_-QBg&usqp=CAU" alt="Postgres logo" width="200"/>
 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvLf2FqJ417MHyGj_cLgLLx8mfTAeac9K80A&usqp=CAU" alt="Redux logo" width="400"/>
 
 </p>
+
+
 
 ## Project takeaways
 
