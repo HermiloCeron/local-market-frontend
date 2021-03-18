@@ -75,13 +75,28 @@ Two user modes:
 
 ## Project takeaways
 
+* Project completed ¬¬:
+
 <p>
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV9sxVITmHqCUV_G9c0AwHGrv2E344k2VhNg&usqp=CAU" alt="Lections learned" width="400"/>
 
 </p>
 
+* Deploy early!
+* Develop backend and frontend in parallel
+* Planning databases is crutial but do not overcomplicate them
+* Think modularity early
+
 
 ## Links
 
+* ![Backend](https://local-market-backend-heroku.herokuapp.com/)
+
+* ![Frontend](http://hermilo-local-market.surge.sh/)
+
+
 ## References
+
+* ![Redux](https://www.youtube.com/watch?v=CVpUuw9XSjY)
+* ![Thunk](https://x-team.com/blog/react-redux-api-introduction/) [Do not use the same API, it has some issues!]
