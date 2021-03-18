@@ -91,12 +91,12 @@ Two user modes:
 
 ## Links
 
-* ![Backend](https://local-market-backend-heroku.herokuapp.com/)
+* [Backend](https://local-market-backend-heroku.herokuapp.com/)
 
-* ![Frontend](http://hermilo-local-market.surge.sh/)
+* [Frontend](http://hermilo-local-market.surge.sh/)
 
 
 ## References
 
-* ![Redux](https://www.youtube.com/watch?v=CVpUuw9XSjY)
-* ![Thunk](https://x-team.com/blog/react-redux-api-introduction/) [Do not use the same API, it has some issues!]
+* [Redux](https://www.youtube.com/watch?v=CVpUuw9XSjY)
+* [Thunk-Axios](https://x-team.com/blog/react-redux-api-introduction/) [Do not use the same API, it has some issues!]
