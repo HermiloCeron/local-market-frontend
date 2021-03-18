@@ -63,9 +63,12 @@ Two user modes:
 
 <img src="https://1000marcas.net/wp-content/uploads/2020/02/GitHub-Logo-600x338.jpg" alt="GitHub logo" height="200"/>
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyS9VY5uFYyc1xVD9-kmMnjR9DpsbuVpr3Xw&usqp=CAU" alt="GitHub logo" height="200"/>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0syl-pMTbiJQw4yW4R0Ll8A3a-K8jAw2M_Q&usqp=CAU" alt="Express logo" height="200"/>
 
-<img src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg" alt="GitHub logo" width="200"/>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO-E3rdwO5-nHqmqbzVeieB_n-jLxH6ax6Dg&usqp=CAU" alt="Sequelize logo" width="200"/>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdD_LzHAz-a6A54tJnv2BSHwAV8BtgX_-QBg&usqp=CAU" alt="Postgres logo" width="200"/>
+
 
 </p>
 
